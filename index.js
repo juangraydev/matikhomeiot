@@ -13,13 +13,13 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
 }));
 
-app.use(express.static(path.join(__dirname + "/client/build")))
+app.use(express.static(path.join(__dirname + "/build")))
 app.use(cors());
 
 
 const auth = require('./router/auth');  
 app.get('*', (req,res) =>{
-    res.sendFile((path.join(__dirname + "/client/build/index.html")));
+    res.sendFile((path.join(__dirname + "/build/index.html")));
 });
 // app.use("/api/v1/auth", auth);
 
