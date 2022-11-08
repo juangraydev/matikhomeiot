@@ -12,6 +12,7 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
 }));
 
+app.use(express.static(path.join(__dirname + "/public")))
 app.use(cors());
 
 
@@ -19,9 +20,9 @@ const auth = require('./router/auth');
 
 // app.use("/api/v1/auth", auth);
 
-app.get('/', (req, res) => {
-    res.send("hello backend")
-});
+// app.get('/', (req, res) => {
+//     res.send("hello backend")
+// });
 
 
 
