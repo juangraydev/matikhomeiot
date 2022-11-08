@@ -1,7 +1,7 @@
 export default [
     {
         path: "/",
-        component: "modules/landing/index.js",
+        component: "modules/auth/signin.js",
         name: "Landing Page"
     },
     {
