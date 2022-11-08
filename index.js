@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const http = require("http")
-const PORT = 8000
+const PORT = process.env.PORT || 8001
 const cors = require('cors')
 const jwt = require('jsonwebtoken');
 // const connection = require('./util/connection');
@@ -17,7 +17,7 @@ app.use(cors());
 
 const auth = require('./router/auth');  
 
-app.use("/api/v1/auth", auth);
+// app.use("/api/v1/auth", auth);
 
 app.get('/', (req, res) => {
     res.send("hello backend")
