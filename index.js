@@ -18,7 +18,9 @@ app.use(cors());
 
 
 const auth = require('./router/auth');  
-
+app.get('*', (req,res) =>{
+    res.sendFile((path.join(__dirname + "/public/index.html")));
+});
 // app.use("/api/v1/auth", auth);
 
 // app.get('/', (req, res) => {
