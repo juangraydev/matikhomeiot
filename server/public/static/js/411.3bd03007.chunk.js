@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkfrontend=self.webpackChunkfrontend||[]).push([[411],{82411:function(n,t,e){e.r(t),e.d(t,{url:function(){return r}});var r="http://127.0.0.1:8000"}}]);
+//# sourceMappingURL=411.3bd03007.chunk.js.map
