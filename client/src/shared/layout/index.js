@@ -15,7 +15,7 @@ function Layout(props) {
 
     React.useEffect(()=>{
         // Unauthorized User will be navigate to signin page
-        if(token !== null && !(location.pathname == '/auth/signin' || location.pathname == '/auth/signup')) {
+        if(token == null && !(location.pathname == '/auth/signin' || location.pathname == '/auth/signup')) {
             navigate("/auth/signin");
         }
     }, [location])
