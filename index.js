@@ -4,7 +4,7 @@ const http = require("http")
 const PORT = 8000
 const cors = require('cors')
 const jwt = require('jsonwebtoken');
-const connection = require('./util/connection');
+// const connection = require('./util/connection');
 const {Server }= require("socket.io");
 var bodyParser = require('body-parser')
 app.use( bodyParser.json() );       // to support JSON-encoded bodies
@@ -40,20 +40,20 @@ function authticateToken(req, res, nex) {
 
 const server = http.createServer(app);
 
-const io = new Server(server, {
-    cors: {
-        origin: ["*", "http://192.168.254.103:3000"],
-        methods: ["GET","POST"]
-    }
-})
+// const io = new Server(server, {
+//     cors: {
+//         origin: ["*", "http://192.168.254.103:3000"],
+//         methods: ["GET","POST"]
+//     }
+// })
 
-io.on("connection", (socket) => {
-    console.log(socket.id)
-    socket.on("send_message", (data) => {
-        console.log("data:", data);
-        socket.broadcast.emit("recieve_message", data)
-    })
-})  
+// io.on("connection", (socket) => {
+//     console.log(socket.id)
+//     socket.on("send_message", (data) => {
+//         console.log("data:", data);
+//         socket.broadcast.emit("recieve_message", data)
+//     })
+// })  
 
 
 server.listen(PORT, () => console.log(`Listening on port '${PORT}'`));
