@@ -1,10 +1,10 @@
 const mysql = require('mysql');
 
 var mySqlConnection = mysql.createConnection({
-    host : 'localhost',
-    user : 'root',
-    password : '',
-    database : 'matikdb',
+    host : 'sql12.freesqldatabase.com',
+    user : 'sql12554580',
+    password : 'gerlTvFeC9',
+    database : 'sql12554580',
     multipleStaments : true
 })  
 

@@ -5,7 +5,7 @@ const http = require("http")
 const PORT = process.env.PORT || 8001
 const cors = require('cors')
 const jwt = require('jsonwebtoken');
-// const connection = require('./util/connection');
+const connection = require('./util/connection');
 const {Server }= require("socket.io");
 var bodyParser = require('body-parser')
 app.use( bodyParser.json() );       // to support JSON-encoded bodies
@@ -21,7 +21,7 @@ const auth = require('./router/auth');
 app.get('*', (req,res) =>{
     res.sendFile((path.join(__dirname + "/public/index.html")));
 });
-// app.use("/api/v1/auth", auth);
+app.use("/api/v1/auth", auth);
 
 // app.get('/', (req, res) => {
 //     res.send("hello backend")
